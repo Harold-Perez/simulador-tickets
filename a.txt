@@ -1,0 +1,9 @@
+        #Libreria 
+        from PIL import Image, ImageTk
+
+        # Imagen (logo a la derecha)
+        imagen = Image.open(r"C:\Users\Harold\Downloads\logo.png")
+        imagen = imagen.resize((100, 50), Image.Resampling.LANCZOS)
+        self.img_tk = ImageTk.PhotoImage(imagen)
+        self.lbl_imagen = tk.Label(self.frame_encabezado, image=self.img_tk, bg="#f8fafc")
+        self.lbl_imagen.grid(row=0, column=1, sticky="e", padx=20, pady=5)
